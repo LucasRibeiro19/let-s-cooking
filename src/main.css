@@ -1,0 +1,62 @@
+main{
+    height: auto;
+    width: calc(100%-20px);
+    padding: 0px 20px 0 20px;
+}
+
+.tag-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 20px 0;
+}
+
+.tag{
+    width: auto;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #C4C4C4;
+}
+
+.tag p {
+    margin: 0 5px 0 5px;
+    text-align: center;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0 25px 0;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card h6{
+    color: rgb(255, 255, 255);
+    align-self: flex-start;
+    margin: 0 1em 0 1em;
+}
+
+.like{
+    align-self: flex-end;
+}
+
+.like .heart{
+    color: #fff;
+}

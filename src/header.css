@@ -1,0 +1,21 @@
+header{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar{
+    display: flex;
+    width: 50%;
+    border-bottom: 3px solid #FBB040;
+    margin-left: 4em;
+    box-shadow: 0 5px 2px -2px rgb(77, 74, 74);
+}
+
+.searchbar input {
+    width: 90%;
+    border: none;
+    outline: none;
+    
+}
