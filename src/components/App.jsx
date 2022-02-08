@@ -8,23 +8,23 @@ import logo from '../assets/logo.png';
 
 
 function App() {
-  const [like, setLike] =useState(false);
   const [recipe, setRecipe] = useState({
     term: "",
     recipes: []
   });
+
+  const [searchRecipe, setSearchRecipe] = useState("")
   
   const handleChange = (term) => {
     const newTerm = {...recipe, term};
     setRecipe(newTerm);
   }
-  
-  
-  
-  const handleLike = (e) => {
-    like ? setLike(false) : setLike(true);
+
+  const handleSearch = (e) =>{
+    setSearchRecipe(recipe)
   }
   
+  console.log(recipe);
   
   
   useEffect(()=>{
@@ -37,16 +37,14 @@ function App() {
 
     fetchRandom();
 
-  },[recipe.term]);
+  },[searchRecipe]);
 
 
   return (
     <>
-      <Header logo={logo} term={recipe.term} handleChange={handleChange}/>
+      <Header logo={logo} term={recipe.term} handleChange={handleChange} handleSearch={handleSearch}/>
       <Main 
       recipes={recipe.recipes}
-      handleLike={handleLike}
-      isLiked={like}
       />
     </>
   );

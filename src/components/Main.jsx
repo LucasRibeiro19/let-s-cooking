@@ -2,12 +2,12 @@ import Tags from './Tags';
 import CardList from './CardList';
 import '../main.css';
 
-function Main({recipes, isActive, handleLike, isLiked}) {
+function Main({recipes, isActive}) {
     return ( 
         <>
             <main>
                 <Tags isActive={isActive}/>
-                <CardList recipes={recipes} handleLike={handleLike} isLiked={isLiked}/>
+                <CardList recipes={recipes}/>
             </main>
         </>
      );

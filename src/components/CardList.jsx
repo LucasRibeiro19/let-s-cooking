@@ -2,11 +2,15 @@ import Card from "./Card";
 import '../main.css';
 
 
-function CardList({recipes, handleLike, isLiked}) {
-console.log(recipes.length);
+function CardList({recipes}) {
     return ( 
         <div className="cards">
-        {recipes.map(recipe => <Card recipe={recipe} key={recipe.index} handleLike={handleLike} isLiked={isLiked}/>)}
+        {recipes.map((recipe,index) => (
+            <Card 
+                recipe={recipe} 
+                key={index} 
+            />
+        ))}
         </div>
      );
 }
