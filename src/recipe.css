@@ -1,0 +1,10 @@
+.back-btn{
+    width: 70px;
+    margin-left: 20px;
+    border-bottom: 2px solid #FBB040;
+}
+
+.back-btn p{
+    margin: 0 0 2px 0;
+    font-weight: bold;
+}

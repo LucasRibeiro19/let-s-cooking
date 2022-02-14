@@ -8,12 +8,12 @@ function Like() {
     
     const handleLike = () => {
         like ? setLike(false) : setLike(true);
-      }
+    }
       
 
 
     return ( 
-        <div className="like">
+        <div className="like" >
             <FontAwesomeIcon icon={faHeart} className="heart" onClick={handleLike} style={like ? {color: '#FBB040'} : {color: '#FFF'}}>
             </FontAwesomeIcon>
         </div>

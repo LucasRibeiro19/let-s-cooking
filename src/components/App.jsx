@@ -1,10 +1,10 @@
 import '../App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Router } from 'react-router';
-import Header from './Header';
-import Main from './Main';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
 import logo from '../assets/logo.png';
+import Recipe from './Recipe';
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
     setSearchRecipe(recipe)
   }
   
-  console.log(recipe);
+
   
   
   useEffect(()=>{
@@ -41,12 +41,10 @@ function App() {
 
 
   return (
-    <>
-      <Header logo={logo} term={recipe.term} handleChange={handleChange} handleSearch={handleSearch}/>
-      <Main 
-      recipes={recipe.recipes}
-      />
-    </>
+    <Routes>
+      <Route path='/' element={<Home logo={logo} term={recipe.term} handleChange={handleChange} handleSearch={handleSearch} recipes={recipe.recipes}/>}/>
+      <Route path='/recipe/:idrecipe' element={<Recipe logo={logo} term={recipe.term} handleChange={handleChange} handleSearch={handleSearch}/>}/>
+    </Routes>
   );
 }
 
